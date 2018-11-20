@@ -1,1 +1,6 @@
+language: python
 
+python: 3.6.6
+
+script:
+  - python ./Source/echo-lang/__init__.py
