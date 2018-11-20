@@ -36,7 +36,7 @@ def Debugstate(state):
 		debugenabled = False
 		print('debug mode has been disabled')
 	else:
-		raise RuntimeError('An Error Has Occured: Invalid Debug State Entered (0005)')statesetup()
+		raise RuntimeError('An Error Has Occured: Invalid Debug State Entered (0005)')
 
 #supresswarnings
 def Echodebug_supresswarning():
