@@ -8,5 +8,5 @@ def Echoprint(message):
 	print(str(message))
 
 #execute
-def shinecute(command):
+def Echocute(command):
 	exec(command)
