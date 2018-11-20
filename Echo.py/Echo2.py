@@ -6,3 +6,7 @@ def Echospace(paragraphspaces=1):
 #print letters/numbers
 def Echoprint(message):
 	print(str(message))
+
+#execute
+def shinecute(command):
+	exec(command)
