@@ -6,7 +6,7 @@ with open("../README.md", "r") as fh:
     LONG_DESCRIPTION = fh.read()
 
 setuptools.setup(
-    name="echo-lang",
+    name="echo_lang",
     version="0.0.1",
     author="elemental9",
     description=
