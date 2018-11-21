@@ -1,50 +1,50 @@
 #sin of a number
-def shinysin(number):
+def Echosin(number):
 	import math
 	return math.sin(number)
   
   #tan of a number
-def shinytan(number):
+def Echotan(number):
 	import math
 	return math.tan(number)
   
 #hypot of a number
-def shinyhypot(number):
+def Echohypot(number):
 	import math
 	return math.hypot(number)
   
 #atan of a number
-def shinyatan(number):
+def Echoatan(number):
 	import math
 	return math.atan(number)
 
 #asin of a number
-def shinyasin(number):
+def Echoasin(number):
 	import math
 	return math.asin(number)
 
 #get value of pi
-def shinepi():
+def Echopi():
 	import math
 	return math.pi
 
 #get value of e
-def shinye():
+def Echoe():
 	import math
 	return math.e
   
 #divide 2 numbers
-def shinedivide(firstnumber, secondnumber):
+def Echodivide(firstnumber, secondnumber):
 	return firstnumber / secondnumber
 
 #multiply 2 numbers
-def shinetimes(firstnumber, secondnumber):
+def Echotimes(firstnumber, secondnumber):
 	return firstnumber * secondnumber
 
 #add 2 numbers
-def shineadd(firstnumber, secondnumber):
+def Echoadd(firstnumber, secondnumber):
 	return firstnumber + secondnumber
 
 #minus 2 numbers
-def shineminus(firstnumber, secondnumber):
+def Echominus(firstnumber, secondnumber):
 	return firstnumber - secondnumber
