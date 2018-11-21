@@ -58,3 +58,4 @@ def Echostore(value):
 #get the stored value
 def Echoget(value):
 	return Echo_stored
+
