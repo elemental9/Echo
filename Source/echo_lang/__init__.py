@@ -11,7 +11,7 @@ def Echospace(paragraphspaces=1):
 		print("", end="/n")
 		
 def echo(text, amount=1):
-	for i in range(amount)
+	for i in range(amount):
 		print(text)
 
 #print letters/numbers
