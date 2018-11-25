@@ -8,8 +8,13 @@ This is an operating system that I am trying to create.
 If there are any suggestions, make sure to make a pull request.
 
 
-Notes
+# Notes
  
 #1 I will try update any recent changes to the readme
 
 #2 build passing 
+  
+  
+# License
+
+This programming language is licensed under Apache 2.0
