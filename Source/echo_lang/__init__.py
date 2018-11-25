@@ -9,6 +9,10 @@ Uncatagorised
 def Echospace(paragraphspaces=1):
 	for i in range(paragraphspaces):
 		print("", end="/n")
+		
+def echo(text, amount=1)
+	for i in range(amount)
+		print(text)
 
 #print letters/numbers
 def Echoprint(message):
