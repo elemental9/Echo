@@ -1,4 +1,4 @@
 import echo_lang as echo
 echo.Echoprint("Hello World!")
 echo.Echopi()
-echo.Echo("hi", 20)
+echo.Echo("Free!", 20)
