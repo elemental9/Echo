@@ -9,5 +9,6 @@ If there are any suggestions, make sure to make a pull request.
 
 
 Notes
-
-#build passing 
+ 
+# I will try update any recent changes to the readme
+# build passing 
