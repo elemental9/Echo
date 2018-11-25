@@ -14,8 +14,8 @@ def Echospace(paragraphspaces=1):
 def Echoprint(message):
 	print(str(message))
 
-def echo(text, amount = 1)
-	for _ in range(amount)
+def echo(text, amount=1)
+	for i in range(amount)
 		print(text)
 #execute
 def Echocute(command):
