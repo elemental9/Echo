@@ -25,3 +25,5 @@ setuptools.setup(
         "Topic :: Software Development :: Libraries :: Python Modules",
     ),
 )
+
+python3 -m pip install --eevee1 --upgrade setuptools wheel
