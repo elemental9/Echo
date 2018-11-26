@@ -1,44 +1,48 @@
 """
 The main code file.
 """
+import math
+import sys
 
 """
 Uncatagorised
 """
-#paragraph space
+
+# Paragraph space
 def Echospace(paragraphspaces=1):
 	for i in range(paragraphspaces):
 		print("", end="/n")
-		
+
+# Print text with amount option
 def Echo(text, amount=1):
 	for i in range(amount):
-		print(text)
+		print(str(text))
 
-#print letters/numbers
+# Print text
 def Echoprint(message):
 	print(str(message))
 
-#execute
+# Execute a command
 def Echocute(command):
 	exec(command)
  
-#evaluate
+# Evaluate an expression
 def Echovaluate(operation):
 	return eval(operation)
 
-#absolute
+# Find the absolute value of a number
 def Echolute(operation):
 	return abs(operation)
 
-#setup debugenabled variable
+# Setup debugenabled variable
 def Echodebug_statesetup():
 	global debugenabled
 	debugenabled = False
 	
-#execute shinydebug_statesetup()
+# Execute shinydebug_statesetup()
 Echodebug_statesetup()
 
-#change debug state
+# Change debug state
 def Debugstate(state):
 	if state == 'enable':
 		debugenabled = True
@@ -49,7 +53,7 @@ def Debugstate(state):
 	else:
 		raise RuntimeError('An Error Has Occured: Invalid Debug State Entered (0005)')
 
-#supresswarnings
+# Supresswarnings
 def Echodebug_supresswarning():
 	if debugenabled is True:
 		import warnings
@@ -57,16 +61,16 @@ def Echodebug_supresswarning():
 	else:
 		raise RuntimeError('An Errror Has Occured:Debug mode Not Enabled(0006)')#supresswarnings
 
-#exit execution
+# Exit execution
 def Echocution(exitcode=0):
 	import sys
 	sys.exit(exitcode)
 	
-#store a value
+# Store a value
 def Echostore(value):
 	Echo_stored = value
 	
-#get the stored value
+# Get the stored value
 def Echoget(value):
 	return Echo_stored
 
