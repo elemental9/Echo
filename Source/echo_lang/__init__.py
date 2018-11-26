@@ -3,6 +3,7 @@ The main code file.
 """
 import math
 import sys
+import warnings
 
 """
 Uncatagorised
@@ -36,8 +37,8 @@ def Echolute(operation):
 
 # Setup debugenabled variable
 def Echodebug_statesetup():
-	global debugenabled
-	debugenabled = False
+    global debugenabled
+    debugenabled = False
 	
 # Execute shinydebug_statesetup()
 Echodebug_statesetup()
@@ -46,24 +47,22 @@ Echodebug_statesetup()
 def Debugstate(state):
 	if state == 'enable':
 		debugenabled = True
-		print('debug mode has been enabled')
+		print('Debug mode has been enabled')
 	elif state =='disable':
 		debugenabled = False
-		print('debug mode has been disabled')
+		print('Debug mode has been disabled')
 	else:
 		raise RuntimeError('An Error Has Occured: Invalid Debug State Entered (0005)')
 
 # Supresswarnings
 def Echodebug_supresswarning():
 	if debugenabled is True:
-		import warnings
 		warnings.filterwarnings("ignore")
 	else:
 		raise RuntimeError('An Errror Has Occured:Debug mode Not Enabled(0006)')#supresswarnings
 
 # Exit execution
 def Echocution(exitcode=0):
-	import sys
 	sys.exit(exitcode)
 	
 # Store a value
@@ -78,53 +77,46 @@ def Echoget(value):
 Maths
 """
 
-#sin of a number
+# Sin of a number
 def Echosin(number):
-	import math
 	return math.sin(number)
   
-  #tan of a number
+# Tan of a number
 def Echotan(number):
-	import math
 	return math.tan(number)
   
-#hypot of a number
+# Hypot of a number
 def Echohypot(number):
-	import math
 	return math.hypot(number)
   
-#atan of a number
+# Atan of a number
 def Echoatan(number):
-	import math
 	return math.atan(number)
 
-#asin of a number
+# Asin of a number
 def Echoasin(number):
-	import math
 	return math.asin(number)
 
-#get value of pi
+# Get value of pi
 def Echopi():
-	import math
 	return math.pi
 
-#get value of e
+# Get value of e
 def Echoe():
-	import math
 	return math.e
   
-#divide 2 numbers
+# Divide 2 numbers
 def Echodivide(firstnumber, secondnumber):
 	return firstnumber / secondnumber
 
-#multiply 2 numbers
+# Multiply 2 numbers
 def Echotimes(firstnumber, secondnumber):
 	return firstnumber * secondnumber
 
-#add 2 numbers
+# Add 2 numbers
 def Echoadd(firstnumber, secondnumber):
 	return firstnumber + secondnumber
 
-#minus 2 numbers
+# Minus 2 numbers
 def Echominus(firstnumber, secondnumber):
 	return firstnumber - secondnumber
