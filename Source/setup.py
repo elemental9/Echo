@@ -27,3 +27,8 @@ setuptools.setup(
 )
 
 python3 -m pip install --eevee1 --upgrade setuptools wheel
+
+python3 -m venv tutorial_env
+source tutorial_env/bin/activate
+
+pip install "echo_lang"
