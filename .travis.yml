@@ -22,7 +22,7 @@ jobs:
           - pip install pyminifier pbr
 
       before_script:
-          - cd src
+          - cd Source
 
       script:
           - find echo_lang -type f -name "*.py" -exec pyminifier --lzma --obfuscate-variables --outfile="{}" "{}" \;
