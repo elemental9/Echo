@@ -9,8 +9,7 @@ setuptools.setup(
     name="echo-lang",
     version="0.0.1",
     author="elemental9",
-    description=
-    "A code os.",
+    description="A code os.",
     long_description=LONG_DESCRIPTION,
     long_description_content_type="text/markdown",
     url="https://github.com/elemental9/Echo",
@@ -24,8 +23,4 @@ setuptools.setup(
         "Operating System :: OS Independent",
         "Topic :: Software Development :: Libraries :: Python Modules",
     ),
-)
-
-python3 -m pip install --eevee1 --upgrade setuptools wheel
-
-pip install "echo_lang"
+    pbr=True)

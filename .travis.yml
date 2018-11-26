@@ -4,12 +4,6 @@ python:                     3.6.7
 
 cache:                      pip
 
-before_install:
-    - git remote set-url origin https://elemental9:${github_token}@github.com/elemental9/Echo.git
-    - git config --global user.name "SOS Bot"
-
-if: tag IS blank
-
 jobs:
   include:
     - stage:                Testing
@@ -20,20 +14,12 @@ jobs:
       script:
           - python Source/test.py
 
-      after_script:
-          - if [ $TRAVIS_PULL_REQUEST != false ]; then travis_terminate 0; fi
-          - pip install bumpversion
-          - bumpversion patch
-          - git add .bumpversion.cfg Source/setup.py
-          - git commit -m "Bump version [skip ci]"
-          - until git push origin HEAD:master; do git fetch; git pull --no-edit; git commit --amend -m "$(git log -1 --pretty=%B)"; done
-
     - stage:                Deployment
 
-      if:                   type != pull_request
+      if:                   type != pull_request AND tag = true
 
       install:
-          - pip install pyminifier
+          - pip install pyminifier pbr
 
       before_script:
           - cd src
@@ -61,5 +47,4 @@ jobs:
 
 env:
     global:
-        - secure: "yrINZDM5bTrJSte5hfXyGWl44cJvIL/3zrdMGpmcFlvk2tUMeXK4tPeuZtVdWUKA5AB3KltSpe+iwKD2JTFBSFNFGv86yXBCjBXxljxGA/Nk8gSd7+MbfoXJgmwzeRj3ITeJkuF6cc2Acf5QrKuUpqRbvcrONZuHMca1hKSkMIgG4xzrwwHmEQiHniedAkLWIxLcEv5RYFBnff/2YFw9h/Ih820dQL9lpGEDdjMWrtyfJeXQVlG+ift8vwvN/JcxNx/d78YxLFXRU/ohaAPH9xaJyJ5R6sFwHEmwGHWnqpHqbkJ60+FsQ+Gc7HTbGDvb0SdcPG45/9xfELlTCNQ8f6MzZr4hOVIZockYAnaR71X0kHp8lYPYmpzb0i8VSB9Ue0+02g+HL7Jnw46qzVsnmWJN0QFd0T88nyb98cbbPXymgXTra7bTKFlSLH544p7wuaw7pjA9hIZYCNY1m5HKsFOAjMhVfExeh4BeACtzreFyOQjQbGKeEPAS8WKvLS2T+tYTfb3ojBH4BGXwYY0vfMBEse3ypWn/ZPSDkxRC0h4CiL4JKzV7NfQPjcFdffX56fo16yofTFAuWMa3sMyPTt9PmfjK1kMlnjlBCa++es7pbeGX+hrRffGlbzN4xMCFU4K38NgQVpZEtV5oEhDbq5CvHrdHV9HoF9WEayfNG2M="
-        - secure: "wpDTzpzVmpri5dnJmCGEeR1S720M4LRjfMhFcaCtOVLC+t/xUvV4xubLEJYtH2qz+45sr2LPetE6+FliZVfuPkqbB3DCZZ1gzH9Vu2tXavBmFQySxcr97+uQnx2x2ux/f8iiweG5RpuQgHXwuUA887hcCJhd2fMwDtKOymibn9IhtWvE54QVUClm7DozhofQsMHGIO9i9M6OKZHvVG24NMGeH/nrjcLFun3TQCPIgMTZbouSSoiSLIrBWjm/DqmdfvVY9NlZZ7rTvumnnupzJB/Bib3GsAC4i3IMd5rdQhd6nj6oBPl5ZTuv+EMi9RZQ/XC2VLKBMS5HEncmzFDSO97DakyQNCs3EsKyhDkO5f57R2SXe0lK6nBtxseDQ7LEz9fh4y3v8Tj3QUfArKiNsAtkK9QsgNX58Fy5NSHJ7LRZGorZvUJR86QzOxvQ/lAAEHMhD5yWbDW6IV/95jUoSTooMLKSAfAdTPTpy7LzDNPtsZ6Y8JJS4gmnZ4/tvSEd3DBZiVsSyNzYLVQWbAv6EKA7ASM7zazoYyKsXHQj9GcGdOED8GCHLSeXzCl+4vRB7mp8oa/gIWgM/yka9QQr4CuwcmpzKLBXn2t5M+52Y5Rq4hT/R3oBiOnQM6DVG33XGZkUzABcC5+0N8zYDNj7uOI79tXCa9YQnRoZ2uC0Ig4="
+        - secure:           "yrINZDM5bTrJSte5hfXyGWl44cJvIL/3zrdMGpmcFlvk2tUMeXK4tPeuZtVdWUKA5AB3KltSpe+iwKD2JTFBSFNFGv86yXBCjBXxljxGA/Nk8gSd7+MbfoXJgmwzeRj3ITeJkuF6cc2Acf5QrKuUpqRbvcrONZuHMca1hKSkMIgG4xzrwwHmEQiHniedAkLWIxLcEv5RYFBnff/2YFw9h/Ih820dQL9lpGEDdjMWrtyfJeXQVlG+ift8vwvN/JcxNx/d78YxLFXRU/ohaAPH9xaJyJ5R6sFwHEmwGHWnqpHqbkJ60+FsQ+Gc7HTbGDvb0SdcPG45/9xfELlTCNQ8f6MzZr4hOVIZockYAnaR71X0kHp8lYPYmpzb0i8VSB9Ue0+02g+HL7Jnw46qzVsnmWJN0QFd0T88nyb98cbbPXymgXTra7bTKFlSLH544p7wuaw7pjA9hIZYCNY1m5HKsFOAjMhVfExeh4BeACtzreFyOQjQbGKeEPAS8WKvLS2T+tYTfb3ojBH4BGXwYY0vfMBEse3ypWn/ZPSDkxRC0h4CiL4JKzV7NfQPjcFdffX56fo16yofTFAuWMa3sMyPTt9PmfjK1kMlnjlBCa++es7pbeGX+hrRffGlbzN4xMCFU4K38NgQVpZEtV5oEhDbq5CvHrdHV9HoF9WEayfNG2M="
