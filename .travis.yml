@@ -16,7 +16,7 @@ jobs:
 
     - stage:                Deployment
 
-      if:                   type != pull_request AND tag = true
+      if:                   type != pull_request AND tag IS present
 
       install:
           - pip install pyminifier pbr
