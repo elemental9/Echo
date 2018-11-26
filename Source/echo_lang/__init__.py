@@ -20,12 +20,6 @@ def Echo(text, amount=1):
     for i in range(amount):
         print(str(text))
 
-
-# Print text
-def Echoprint(message):
-    print(str(message))
-
-
 # Execute a command
 def Echocute(command):
     exec(command)
