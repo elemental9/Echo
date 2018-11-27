@@ -10,7 +10,7 @@ Uncatagorised
 
 
 # Paragraph space
-def Echospace(paragraphspaces=1):
+def space(paragraphspaces=1):
     for i in range(paragraphspaces):
         print("", end="/n")
 
@@ -57,9 +57,28 @@ def Debugstate(state):
         raise RuntimeError(
             'An Error Has Occured: Invalid Debug State Entered (0005)')
 
+def compare(value1, value2, comparison):
+    if isnum(value1) and isnum(value2):
+        comparison = comparison.lower()
+        if comparison == 'equals':
+            return value1 == value2
+        elif comparison == 'not equal':
+            return value1 != value2
+        elif comparison == 'less than':
+            return value1 < value2
+        elif comparison == 'greater than':
+            return value1 > value2
+        elif comparison == 'more than':
+            return value1 > value2
+        elif comparison == 'less than or equal to':
+            return value1 <= value2
+        elif comparison == 'greater than or equal to':
+            return value1 >= value2
+        elif comparison == 'more than or equal to':
+            return value1 >= value2
 
 # Supresswarnings
-def Echodebug_supresswarning():
+def debug_supresswarning():
     if debugenabled is True:
         warnings.filterwarnings("ignore")
     else:
