@@ -30,7 +30,8 @@ jobs:
       deploy:
           - provider:       pypi
             user:           "eevee1"
-            password:       $pypi_password
+            password:
+                secure: qgDrBxXn2QVfyC1Q/TqCVlX9rLjuPQKhVyBtPKofn1NNysWLBDCWb0HJtdqntv4JLVY/CeeFPpJhWA476CUq/jvlkk+oS0WlKXucL9hDybo3cQqlAUrPx+Hxkxv4eNJTbKYG66+g+f8eMkLqeDWSnKLDqYnxmJqxxrYf/taZ1hRrLVT0iJg+eh62EZY0qCSFlDWfHp0NtfUYdHuttqDRPMpvwXRa1DnGXZ1d2iYKb15NRySKoERZMnSd8a95PMHvQ+tzOBhba6A+BgylwSzqIH784sxuZsgcl7CtDh1KUERC1aAeXmf32tyalmJUNnb+aml711KMwO/mIUJ9NChhFpc9QqIRVh8Alq/wVftU/AYmZjk3F1kYVjShuHlR7ADPJLzxDzWnIPjOZlI3MGQxQ/Z5TCsb7W9gSnxAnD3NPBFbwHhMDX65edKQFMBeqzXzieOJ1zx7MwAVITNaqKFeYuk85H/xSVe2u6U8UoYnbk8sHv7ryU9qVc8z3SPVfzvwlp+Qw2ZdvXwMssMbwjjFQAkiWZbmQVMmny0geXi7WCQVc5cgLvPM0LUD5LGJsYwN8iKE2CbZnyglCJyZVLCuWIKuU9yJUaU33ACRCKIdcd0SwMUQwuSWUdUVnr2qxAMbZ4eYGCGTURwuFcv5vHKHzu/TD435Wjtm9jRct31eZz4=
             skip_cleanup:   true
             server:         https://test.pypi.org/legacy/
             distributions:  "sdist bdist_wheel"
@@ -39,12 +40,9 @@ jobs:
 
           - provider:       pypi
             user:           "eevee1"
-            password:       $pypi_password
+            password:
+                secure: qgDrBxXn2QVfyC1Q/TqCVlX9rLjuPQKhVyBtPKofn1NNysWLBDCWb0HJtdqntv4JLVY/CeeFPpJhWA476CUq/jvlkk+oS0WlKXucL9hDybo3cQqlAUrPx+Hxkxv4eNJTbKYG66+g+f8eMkLqeDWSnKLDqYnxmJqxxrYf/taZ1hRrLVT0iJg+eh62EZY0qCSFlDWfHp0NtfUYdHuttqDRPMpvwXRa1DnGXZ1d2iYKb15NRySKoERZMnSd8a95PMHvQ+tzOBhba6A+BgylwSzqIH784sxuZsgcl7CtDh1KUERC1aAeXmf32tyalmJUNnb+aml711KMwO/mIUJ9NChhFpc9QqIRVh8Alq/wVftU/AYmZjk3F1kYVjShuHlR7ADPJLzxDzWnIPjOZlI3MGQxQ/Z5TCsb7W9gSnxAnD3NPBFbwHhMDX65edKQFMBeqzXzieOJ1zx7MwAVITNaqKFeYuk85H/xSVe2u6U8UoYnbk8sHv7ryU9qVc8z3SPVfzvwlp+Qw2ZdvXwMssMbwjjFQAkiWZbmQVMmny0geXi7WCQVc5cgLvPM0LUD5LGJsYwN8iKE2CbZnyglCJyZVLCuWIKuU9yJUaU33ACRCKIdcd0SwMUQwuSWUdUVnr2qxAMbZ4eYGCGTURwuFcv5vHKHzu/TD435Wjtm9jRct31eZz4=
             skip_cleanup:   true
             distributions:  "sdist bdist_wheel"
             on:
                 tags: true
-
-env:
-    global:
-        - secure: mqg/FhuC5tmnXom/0uvFbVtKYtqZxwBXPXW/6fB78NIPIcp+MI2IzqbO19/pqLb6uyFtaZR+u6FV6LJoiuEm2k06OrA3gdH2hTHU6FDWIVwB0+yK4YE/PnHfNNYQmVT9Rd6Sj3G1hMc1GBdNGUEoTqEgBOMalTNjPabIVSVhjk6deMJnYohmZOwXv9NPHfSxiWTcHxuE4/G3JVikMvakDc0Rg1va3LNz3Wrdyzm11Y/fjiJz4aHcGG/CxtSN/XBeXeTks1nOOIpzx0NzHplztfs5I4PmbENceWZDu+p4AZW0YWFEkJ30hbpLGDKAIDbmFmvMIhqAHe2HiktCuRim4rNzBOosUyi9ZpytdeSQeucPwL6A5by2gxH+DFtyTLsiVXBCJ20l2/hGk51FlRB6bGe2L0Q1BZ3dnEpCj+AunuTA1MLx2BI8CT/v6s6JY29+bfbkK9+Cfw1SJptPqdocRDdkcuGtaoAESHhe8sy2WJvEkgpsWodkoKWUdjwEl2L0ZlB+m+3+Zms/6IdHUzQ2hbDpvRlWLGCRGhA59RUVEMfST4eqlBCWAsftSkBZ1T5GSNz5qHzE6d5Sj0El5tq33py2HHLVfDzkuv30YI69w/mhrv1EWOQQbNVq/PIFmvqXeLwhCbUIdIQeOHerMqareBvdD9ic0x4QtUnc7Arpf7Y=
