@@ -42,7 +42,7 @@ jobs:
             user:           "eevee1"
             password:
                 secure: qgDrBxXn2QVfyC1Q/TqCVlX9rLjuPQKhVyBtPKofn1NNysWLBDCWb0HJtdqntv4JLVY/CeeFPpJhWA476CUq/jvlkk+oS0WlKXucL9hDybo3cQqlAUrPx+Hxkxv4eNJTbKYG66+g+f8eMkLqeDWSnKLDqYnxmJqxxrYf/taZ1hRrLVT0iJg+eh62EZY0qCSFlDWfHp0NtfUYdHuttqDRPMpvwXRa1DnGXZ1d2iYKb15NRySKoERZMnSd8a95PMHvQ+tzOBhba6A+BgylwSzqIH784sxuZsgcl7CtDh1KUERC1aAeXmf32tyalmJUNnb+aml711KMwO/mIUJ9NChhFpc9QqIRVh8Alq/wVftU/AYmZjk3F1kYVjShuHlR7ADPJLzxDzWnIPjOZlI3MGQxQ/Z5TCsb7W9gSnxAnD3NPBFbwHhMDX65edKQFMBeqzXzieOJ1zx7MwAVITNaqKFeYuk85H/xSVe2u6U8UoYnbk8sHv7ryU9qVc8z3SPVfzvwlp+Qw2ZdvXwMssMbwjjFQAkiWZbmQVMmny0geXi7WCQVc5cgLvPM0LUD5LGJsYwN8iKE2CbZnyglCJyZVLCuWIKuU9yJUaU33ACRCKIdcd0SwMUQwuSWUdUVnr2qxAMbZ4eYGCGTURwuFcv5vHKHzu/TD435Wjtm9jRct31eZz4=
-            serer:          https://upload.pypi.org/legacy/
+            server:          https://upload.pypi.org/legacy/
             skip_cleanup:   true
             distributions:  "sdist bdist_wheel"
             on:
