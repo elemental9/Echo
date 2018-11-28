@@ -13,7 +13,6 @@ jobs:
 
       script:
           - python Source/test.py
-          - if [[ -z "${pypi_password}" ]];then echo pypi password exists;fi;if [[ -z "${PIFmvqXeLwhCbUIdIQeOHerMqareBvdD9ic0x4QtUnc7Arpf7Y}" ]];then echo PIFmvqXeLwhCbUIdIQeOHerMqareBvdD9ic0x4QtUnc7Arpf7Y exists;fi
 
     - stage:                Deployment
 
@@ -31,7 +30,7 @@ jobs:
       deploy:
           - provider:       pypi
             user:           "eevee1"
-            password:       "$jNUPnCmo"
+            password:       $pypi_password
             skip_cleanup:   true
             server:         https://test.pypi.org/legacy/
             distributions:  "sdist bdist_wheel"
@@ -40,7 +39,7 @@ jobs:
 
           - provider:       pypi
             user:           "eevee1"
-            password:       "$jNUPnCmo"
+            password:       $pypi_password
             skip_cleanup:   true
             distributions:  "sdist bdist_wheel"
             on:
