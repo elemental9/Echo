@@ -7,7 +7,6 @@ with open("../README.md", "r") as fh:
 
 setuptools.setup(
     name="echo-lang",
-    version="0.0.1",
     author="elemental9",
     description="A code os.",
     long_description=LONG_DESCRIPTION,
