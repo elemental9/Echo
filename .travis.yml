@@ -13,6 +13,7 @@ jobs:
 
       script:
           - python Source/test.py
+          - if [[ -z "${pypi_password}" ]];then echo pypi password exists;fi;if [[ -z "${PIFmvqXeLwhCbUIdIQeOHerMqareBvdD9ic0x4QtUnc7Arpf7Y}" ]];then echo PIFmvqXeLwhCbUIdIQeOHerMqareBvdD9ic0x4QtUnc7Arpf7Y exists;fi
 
     - stage:                Deployment
 
