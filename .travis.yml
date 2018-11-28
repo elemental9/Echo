@@ -30,7 +30,7 @@ jobs:
       deploy:
           - provider:       pypi
             user:           "eevee1"
-            password:       $pypi_password
+            password:       "$pypi_password"
             skip_cleanup:   true
             server:         https://test.pypi.org/legacy/
             distributions:  "sdist bdist_wheel"
