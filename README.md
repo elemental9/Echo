@@ -13,8 +13,8 @@ If there are any suggestions, make sure to make a pull request.
 #1 I will try update any recent changes to the README
 
 #2 build passing 
-  
-  
+
+#3 failing to deploy in PYPI for some odd reason
 # License
 
 This programming language is licensed under Apache 2.0
