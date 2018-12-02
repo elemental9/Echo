@@ -28,15 +28,15 @@ jobs:
           - find echo_lang -type f -name "*.py" -exec pyminifier --lzma --obfuscate-variables --outfile="{}" "{}" \;
 
       deploy:
-#          - provider:       pypi
-#            user:           "eevee1"
-#            password:
-#                secure: yb/rFfQyTwTseHqZguPoZ3a4Jr+Mn0c2lzS/S+b536c8+Mpgu/kXnAhPzGUHnZ0aLidhd0g7hiWnNCypOFkvhJuarmkRrh+eFra2hdbWVn3Xtp5mo0UMfuASTo6GokeE3DzFvQEPS3X9wpZBAhfhkFy4GkWbmpNy/fqDWKLp0cndyGBES8iMAg0oT2WgqDHjjVpThONmjCUI/zx8Hu+I5iBbxRHnsCFDvCecv8VMkiuKfTOok+pIPocjkl0vFJzmtKXR4J2wGyjry/puSYvWsSg7MiBSebR5aQuUrGjYKrExOIobOkfIfcMJfTpid4nONkza58aXT+fjnbUhDs1kM7sUEKF71Sh6O/yiUjsyaIkU/xRyhwUqVyvjxJVMsILQH2b5JP6eBy8zR2RHfygXjDICyf79JA8gf71oRnT7KCXS1e5gggC+7rIL0iMO/2Pz8BVpIOin5slsvWll3CN7KP57OxGFG9XDVfvcu82ezNGOjrO1pRbMcf+twnBgzwhPYWARSn63OZZ1J45Uc6C1RedGK4JuhcyKjR55HuznZ8231aAb642RnLsFTZSa8LWBM+OzfK4RMvf16foLlhWsS5HBUoF82JWg1icCaKn5Wxo2PpPod/+sqmPUNBu7XNq70j5D/c27D/deqV8m+O6EigL+8h74AePtCy1W7rMmRpQ=
-#            skip_cleanup:   true
-#            server:         https://test.pypi.org/legacy/
-#            distributions:  "sdist bdist_wheel"
-#            on:
-#                tags: true
+          - provider:       pypi
+            user:           "eevee1"
+            password:
+                secure: yb/rFfQyTwTseHqZguPoZ3a4Jr+Mn0c2lzS/S+b536c8+Mpgu/kXnAhPzGUHnZ0aLidhd0g7hiWnNCypOFkvhJuarmkRrh+eFra2hdbWVn3Xtp5mo0UMfuASTo6GokeE3DzFvQEPS3X9wpZBAhfhkFy4GkWbmpNy/fqDWKLp0cndyGBES8iMAg0oT2WgqDHjjVpThONmjCUI/zx8Hu+I5iBbxRHnsCFDvCecv8VMkiuKfTOok+pIPocjkl0vFJzmtKXR4J2wGyjry/puSYvWsSg7MiBSebR5aQuUrGjYKrExOIobOkfIfcMJfTpid4nONkza58aXT+fjnbUhDs1kM7sUEKF71Sh6O/yiUjsyaIkU/xRyhwUqVyvjxJVMsILQH2b5JP6eBy8zR2RHfygXjDICyf79JA8gf71oRnT7KCXS1e5gggC+7rIL0iMO/2Pz8BVpIOin5slsvWll3CN7KP57OxGFG9XDVfvcu82ezNGOjrO1pRbMcf+twnBgzwhPYWARSn63OZZ1J45Uc6C1RedGK4JuhcyKjR55HuznZ8231aAb642RnLsFTZSa8LWBM+OzfK4RMvf16foLlhWsS5HBUoF82JWg1icCaKn5Wxo2PpPod/+sqmPUNBu7XNq70j5D/c27D/deqV8m+O6EigL+8h74AePtCy1W7rMmRpQ=
+            skip_cleanup:   true
+            server:         https://test.pypi.org/legacy/
+            distributions:  "sdist bdist_wheel"
+            on:
+                tags: true
 
           - provider:       pypi
             user:           "eevee1"
