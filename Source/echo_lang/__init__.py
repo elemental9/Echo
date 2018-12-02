@@ -54,8 +54,8 @@ def Debugstate(state):
         debugenabled = False
         print('Debug mode has been disabled')
     else:
-        raise RuntimeError(
-            'An Error Has Occured: Invalid Debug State Entered (0005)')
+        raise RuntimeWarning(
+            'Invalid debug state specified.')
 
 def compare(value1, value2, comparison):
     if isnum(value1) and isnum(value2):
@@ -82,8 +82,7 @@ def debug_supresswarning():
     if debugenabled is True:
         warnings.filterwarnings("ignore")
     else:
-        raise RuntimeError('An Errror Has Occured:Debug mode Not Enabled(0006)'
-                          )  #supresswarnings
+        raise RuntimeWarning('Debug mode is not enabled.')
 
 
 # Exit execution
