@@ -30,22 +30,22 @@ jobs:
       deploy:
           - provider:       pypi
             user:           "eevee1"
-            password: $pypi_password
+            password:       $pypi_password
             skip_cleanup:   true
             server:         https://test.pypi.org/legacy/
             distributions:  "sdist bdist_wheel"
             on:
-                tags: true
+                tags:       true
 
           - provider:       pypi
             user:           "eevee1"
-            password: $pypi_password
-            server:          https://upload.pypi.org/legacy/
+            password:       $pypi_password
+            server:         https://upload.pypi.org/legacy/
             skip_cleanup:   true
             distributions:  "sdist bdist_wheel"
             on:
-                tags: true
+                tags:       true
 
 env:
     global:
-        - secure: "Tnru4jWxNENVuLJcbhqkYivSX5K8xvou+sCehabDA4nourBM98Nsz0GTpUzZsaJe7iTP2/CtU86bEBuwDp7RvjrSceKEnwotR+mLLOLREDAzIHmi27CHKn4BqR0TV26mf3vHlD2Cc/rwnnKOAecpkWWzTXUVZlxINpDEoIjuMCWxDIZeVZNnqAgaza81ZOak8n2RJvdgHxOnoi8u7c59d203u0yf0QNTegJvt3anhxO7cCIaeE1KnQhhyw89NCInDyaYpmVgx9JITNU2T1Mn3VTc+DdUB62Rt3jr+2G6MP1tUEF1eOveedR/nIYhDiAZUqUcQLEcOMr7NlMv8OJJgRDO9kdi/RraAB2I8C5+Qo8r33fY4B8IfUWSfEwLogXnI6akNRMenBtI/HSXfW1iSCn/zScRaPgCMMZiEK4HxOqxjl7VbTgL7Ld/TT0MySvqLq5raZ89QLYe6eYuXeeQIq3vng9FAgtMNkftD4ymJevTJbCo4bGnxzg/1Lscv96pIqs2v+PE3XkfBj2/rE7ieOuHOkFFq7uJbMQdqg9euU+wExGPHpzaHc2MSy/rGBtemCT4nOm6PfpM1WTRUWpVAzQZ8TELfSPIqcK9b19etWakvE7lvqTzU3hSODZYwajP/xln+sRem/DZxD+wMeKNP5WvbThG5WMS1N+/QngrU+o="
+        - secure:           "Tnru4jWxNENVuLJcbhqkYivSX5K8xvou+sCehabDA4nourBM98Nsz0GTpUzZsaJe7iTP2/CtU86bEBuwDp7RvjrSceKEnwotR+mLLOLREDAzIHmi27CHKn4BqR0TV26mf3vHlD2Cc/rwnnKOAecpkWWzTXUVZlxINpDEoIjuMCWxDIZeVZNnqAgaza81ZOak8n2RJvdgHxOnoi8u7c59d203u0yf0QNTegJvt3anhxO7cCIaeE1KnQhhyw89NCInDyaYpmVgx9JITNU2T1Mn3VTc+DdUB62Rt3jr+2G6MP1tUEF1eOveedR/nIYhDiAZUqUcQLEcOMr7NlMv8OJJgRDO9kdi/RraAB2I8C5+Qo8r33fY4B8IfUWSfEwLogXnI6akNRMenBtI/HSXfW1iSCn/zScRaPgCMMZiEK4HxOqxjl7VbTgL7Ld/TT0MySvqLq5raZ89QLYe6eYuXeeQIq3vng9FAgtMNkftD4ymJevTJbCo4bGnxzg/1Lscv96pIqs2v+PE3XkfBj2/rE7ieOuHOkFFq7uJbMQdqg9euU+wExGPHpzaHc2MSy/rGBtemCT4nOm6PfpM1WTRUWpVAzQZ8TELfSPIqcK9b19etWakvE7lvqTzU3hSODZYwajP/xln+sRem/DZxD+wMeKNP5WvbThG5WMS1N+/QngrU+o="
