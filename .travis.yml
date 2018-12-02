@@ -19,7 +19,7 @@ jobs:
       if:                   type != pull_request AND tag IS present
 
       install:
-          - pip install pyminifier pbr
+          - pip install pyminifier
 
       before_script:
           - cd Source
