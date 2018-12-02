@@ -19,7 +19,7 @@ jobs:
       if:                   type != pull_request AND tag IS present
 
       install:
-          - pip install pyminifier
+          - pip install pyminifier setuptools-git-version
 
       before_script:
           - cd Source
