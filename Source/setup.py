@@ -2,4 +2,7 @@
 import setuptools
 
 # Setup module
-setuptools.setup(setup_requires=['pbr'], pbr=True)
+setuptools.setup(
+    version_format='{tag}',
+    setup_requires=['setuptools-git-version'],
+)
