@@ -4,6 +4,7 @@ The main code file.
 import math
 import sys
 import warnings
+from quilt_lang import isnum
 """
 Uncatagorised
 """
@@ -11,14 +12,15 @@ Uncatagorised
 
 # Paragraph space
 def space(paragraphspaces=1):
-    for i in range(paragraphspaces):
+    for _ in range(paragraphspaces):
         print("", end="/n")
 
 
 # Print text with amount option
 def Echo(text, amount=1):
-    for i in range(amount):
+    for _ in range(amount):
         print(str(text))
+
 
 # Execute a command
 def Echocute(command):
@@ -36,13 +38,13 @@ def Echolute(operation):
 
 
 # Setup debugenabled variable
-def Echodebug_statesetup():
+def _Echodebug_statesetup():
     global debugenabled
     debugenabled = False
 
 
-# Execute shinydebug_statesetup()
-Echodebug_statesetup()
+# Execute Echodebug_statesetup()
+_Echodebug_statesetup()
 
 
 # Change debug state
@@ -54,8 +56,8 @@ def Debugstate(state):
         debugenabled = False
         print('Debug mode has been disabled')
     else:
-        raise RuntimeWarning(
-            'Invalid debug state specified.')
+        raise RuntimeWarning('Invalid debug state specified.')
+
 
 def compare(value1, value2, comparison):
     if isnum(value1) and isnum(value2):
@@ -77,6 +79,7 @@ def compare(value1, value2, comparison):
         elif comparison == 'more than or equal to':
             return value1 >= value2
 
+
 # Supresswarnings
 def debug_supresswarning():
     if debugenabled is True:
@@ -88,6 +91,16 @@ def debug_supresswarning():
 # Exit execution
 def Echocution(exitcode=0):
     sys.exit(exitcode)
+
+
+# Initialise value
+def _Echovar_setup():
+    Echo_stored = None
+    global Echo_stored
+
+
+# Execute Echovar_setup()
+_Echovar_setup()
 
 
 # Store a value
