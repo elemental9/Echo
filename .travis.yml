@@ -25,7 +25,7 @@ jobs:
           - cd Source
 
       script:
-          - find echo_lang -type f -name "*.py" -exec pyminifier --lzma --obfuscate-variables --outfile="{}" "{}" \;
+          - find echo_lang -type f -name "*.py" -exec pyminifier --gzip --obfuscate-variables --outfile="{}" "{}" \;
 
       deploy:
           - provider:       pypi
