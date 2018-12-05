@@ -22,9 +22,7 @@ This programming language is licensed under Apache 2.0
 
 
 # Install via pip
-
 pip install echo-lang
 
 # Importing
-
 import echo_lang as _
