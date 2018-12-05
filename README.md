@@ -26,3 +26,6 @@ pip install echo-lang
 
 # Importing
 import echo_lang as _
+
+# Reporting Issues
+Any new or existing bugs can be reported in the issues section of the official GitHub repository.
