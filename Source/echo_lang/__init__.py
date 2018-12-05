@@ -95,8 +95,8 @@ def Echocution(exitcode=0):
 
 # Initialise value
 def _Echovar_setup():
-    Echo_stored = None
     global Echo_stored
+    Echo_stored = None
 
 
 # Execute Echovar_setup()
