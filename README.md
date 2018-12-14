@@ -22,10 +22,14 @@ This programming language is licensed under Apache 2.0
 
 
 # Install via pip
+```sh
 pip install echo-lang
+```
 
 # Importing
+```py
 import echo_lang as _
+```
 
 # Reporting Issues
 Any new or existing bugs can be reported in the issues section of the official GitHub repository.
