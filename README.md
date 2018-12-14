@@ -27,7 +27,7 @@ pip install echo-lang
 # Importing
 
 ```py
-import echo_lang as _
+from echo_lang import *
 ```
 
 # Reporting Issues
