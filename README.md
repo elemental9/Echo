@@ -8,7 +8,6 @@ This is an operating system that I am trying to create.
 
 If there are any suggestions, make sure to make a pull request.
 
-
 # Notes
  
 1. I will try update any recent changes to the [README](README.md)
@@ -20,11 +19,13 @@ If there are any suggestions, make sure to make a pull request.
 This programming language is licensed under [Apache 2.0](LICENSE)
 
 # Install via pip
+
 ```sh
 pip install echo-lang
 ```
 
 # Importing
+
 ```py
 import echo_lang as _
 ```
