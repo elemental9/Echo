@@ -11,11 +11,11 @@ If there are any suggestions, make sure to make a pull request.
 
 # Notes
  
-#1 I will try update any recent changes to the [README](README.md)
+1. I will try update any recent changes to the [README](README.md)
 
-#2 build passing 
+2. Build passing 
 
-#3 DEPLOYED ON PYPI!!!
+3. DEPLOYED ON PYPI!!!
 
 # License
 
