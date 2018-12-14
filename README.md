@@ -16,10 +16,10 @@ If there are any suggestions, make sure to make a pull request.
 #2 build passing 
 
 #3 DEPLOYED ON PYPI!!!
+
 # License
 
 This programming language is licensed under [Apache 2.0](LICENSE)
-
 
 # Install via pip
 ```sh
