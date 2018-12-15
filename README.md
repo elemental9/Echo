@@ -8,24 +8,27 @@ This is an operating system that I am trying to create.
 
 If there are any suggestions, make sure to make a pull request.
 
-
 # Notes
  
-#1 I will try update any recent changes to the README
+1. I will try update any recent changes to the [README](README.md)
+1. Build passing 
+1. DEPLOYED ON PYPI!!!
 
-#2 build passing 
-
-#3 DEPLOYED ON PYPI!!!
 # License
 
-This programming language is licensed under Apache 2.0
-
+This programming language is licensed under [Apache 2.0](LICENSE)
 
 # Install via pip
+
+```sh
 pip install echo-lang
+```
 
 # Importing
-import echo_lang as _
+
+```py
+from echo_lang import *
+```
 
 # Reporting Issues
 Any new or existing bugs can be reported in the issues section of the official GitHub repository.
