@@ -10,9 +10,14 @@ jobs:
 
       install:
           - pip install -r requirements.txt
+          - pip install codecov
 
       script:
-          - python Source/test.py
+          - cd Source
+          - coverage run test.py
+
+      after_success:
+          - codecov
 
     - stage:                Deployment
 
