@@ -6,49 +6,81 @@ import sys
 import warnings
 from quilt_lang import isnum
 """
-Uncatagorised
+Setup
 """
 
 
-# Paragraph space
-def space(paragraphspaces=1):
-    for _ in range(paragraphspaces):
-        print("", end="/n")
+def _Echovar_setup():
+    """
+    Initialise value
+    """
+    global Echo_stored
+    Echo_stored = None
 
 
-# Print text with amount option
-def Echo(text, amount=1):
-    for _ in range(amount):
-        print(str(text))
+# Execute _Echovar_setup()
+_Echovar_setup()
 
 
-# Execute a command
-def Echocute(command):
-    exec(command)
-
-
-# Evaluate an expression
-def Echovaluate(operation):
-    return eval(operation)
-
-
-# Find the absolute value of a number
-def Echolute(operation):
-    return abs(operation)
-
-
-# Setup debugenabled variable
 def _Echodebug_statesetup():
+    """
+    Setup debugenabled variable
+    """
     global debugenabled
     debugenabled = False
 
 
-# Execute Echodebug_statesetup()
+# Execute _Echodebug_statesetup()
 _Echodebug_statesetup()
+"""
+Uncatagorised
+"""
 
 
-# Change debug state
+def space(paragraphspaces=1):
+    """
+    Paragraph space
+    """
+    for _ in range(paragraphspaces):
+        print("", end="/n")
+
+
+def Echo(text, amount=1):
+    """
+    Print text with amount option
+    
+    >>> Echo("Hello World!")
+    Hello World!
+    """
+    for _ in range(amount):
+        print(str(text))
+
+
+def Echocute(command):
+    """
+    Execute a command
+    """
+    exec(command)
+
+
+def Echovaluate(operation):
+    """
+    Evaluate an expression
+    """
+    return eval(operation)
+
+
+def Echolute(operation):
+    """
+    Find the absolute value of a number
+    """
+    return abs(operation)
+
+
 def Debugstate(state):
+    """
+    Change debug state
+    """
     if state == 'enable':
         debugenabled = True
         print('Debug mode has been enabled')
@@ -60,6 +92,9 @@ def Debugstate(state):
 
 
 def compare(value1, value2, comparison):
+    """
+    Compare 2 values
+    """
     if isnum(value1) and isnum(value2):
         comparison = comparison.lower()
         if comparison == 'equals':
@@ -80,36 +115,34 @@ def compare(value1, value2, comparison):
             return value1 >= value2
 
 
-# Supresswarnings
 def debug_supresswarning():
+    """
+    Supress warnings
+    """
     if debugenabled is True:
         warnings.filterwarnings("ignore")
     else:
         raise RuntimeWarning('Debug mode is not enabled.')
 
 
-# Exit execution
 def Echocution(exitcode=0):
+    """
+    Exit execution
+    """
     sys.exit(exitcode)
 
 
-# Initialise value
-def _Echovar_setup():
-    global Echo_stored
-    Echo_stored = None
-
-
-# Execute Echovar_setup()
-_Echovar_setup()
-
-
-# Store a value
 def Echostore(value):
+    """
+    Store a value
+    """
     Echo_stored = value
 
 
-# Get the stored value
 def Echoget(value):
+    """
+    Get the stored value
+    """
     return Echo_stored
 
 
@@ -118,18 +151,24 @@ Maths
 """
 
 
-# Sin of a number
 def Echosin(number):
+    """
+    Sin of a number
+    """
     return math.sin(number)
 
 
-# Tan of a number
 def Echotan(number):
+    """
+    Tan of a number
+    """
     return math.tan(number)
 
 
-# Hypot of a number
 def Echohypot(number):
+    """
+    Hypot of a number
+    """
     return math.hypot(number)
 
 
@@ -138,36 +177,59 @@ def Echoatan(number):
     return math.atan(number)
 
 
-# Asin of a number
 def Echoasin(number):
+    """
+    Asin of a number
+    """
     return math.asin(number)
 
 
-# Get value of pi
 def Echopi():
+    """
+    Get value of pi
+    
+    >>> import math
+    >>> math.pi == Echopi()
+    """
     return math.pi
 
 
-# Get value of e
 def Echoe():
+    """
+    Get value of e
+    """
     return math.e
 
 
-# Divide 2 numbers
 def Echodivide(firstnumber, secondnumber):
+    """
+    Divide 2 numbers
+    """
     return firstnumber / secondnumber
 
 
-# Multiply 2 numbers
 def Echotimes(firstnumber, secondnumber):
+    """
+    Multiply 2 numbers
+    """
     return firstnumber * secondnumber
 
 
-# Add 2 numbers
 def Echoadd(firstnumber, secondnumber):
+    """
+    Add 2 numbers
+    """
     return firstnumber + secondnumber
 
 
-# Minus 2 numbers
 def Echominus(firstnumber, secondnumber):
+    """
+    Minus 2 numbers
+    """
     return firstnumber - secondnumber
+
+
+# Unit testing
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod()
