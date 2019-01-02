@@ -15,8 +15,8 @@ jobs:
           - pip install codecov
 
       script:
-          - cd Source
-          - coverage run test.py
+          - cd Source/echo_lang
+          - coverage run __init__.py -v
 
       after_success:
           - codecov
