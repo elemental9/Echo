@@ -190,6 +190,7 @@ def Echopi():
     
     >>> import math
     >>> math.pi == Echopi()
+    True
     """
     return math.pi
 
