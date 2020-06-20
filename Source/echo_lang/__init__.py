@@ -41,8 +41,7 @@ def space(paragraphspaces=1):
     """
     Paragraph space
     """
-    for _ in range(paragraphspaces):
-        print("", end="/n")
+    print("\n" * paragraphspaces)
 
 
 def Echo(text, amount=1):
